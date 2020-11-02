@@ -52,6 +52,9 @@ public:
     ParseResult unpack(std::string& data);
     ParseResult unpackAndCompleted(std::string& data);
 
+    const std::map <std::string, std::string>& getHeaders();
+    void packPathParam(std::string& path);
+
     static std::string MethonToStr(Methon methon);
     static Methon StrToMethon(std::string& str);
 private:
@@ -63,7 +66,6 @@ private:
     std::map<std::string, std::string> heads_;
     std::string content_;
 
-    void packPathParam(std::string& path);
     int unpackUrl(std::string& str);
     int unpackPath(std::string& str);
 };

@@ -365,3 +365,7 @@ int uv::http::Request::unpackPath(std::string& str)
     }
     return 0;
 }
+
+const std::map <std::string, std::string>& uv::http::Request::getHeaders() {
+    return heads_;
+}
